@@ -70,11 +70,11 @@ export class JoymeterboardComponent {
     },
   ];
 
-  reviewRecords = [
+  allRecords = [
     {
       "id": 1,
       "type": "n",
-      "feedback":"Disappointed",
+      "feedback": "Disappointed",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I have done some work for somebody, but he is not satisfied. I still want the feedback from him, and am trying to convince him to give me some feedback (likely bad); I honestly wouldn’t like to get negative feedback."
@@ -82,7 +82,7 @@ export class JoymeterboardComponent {
     {
       "id": 2,
       "type": "vp",
-      "feedback":"Very Happy",
+      "feedback": "Very Happy",
       "name": "Anonymous",
       "team": "anon.",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D "
@@ -90,7 +90,7 @@ export class JoymeterboardComponent {
     {
       "id": 3,
       "type": "p",
-      "feedback":"Positive",
+      "feedback": "Positive",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
@@ -98,7 +98,7 @@ export class JoymeterboardComponent {
     {
       "id": 4,
       "type": "vp",
-      "feedback":"Very Happ",
+      "feedback": "Very Happ",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D"
@@ -106,7 +106,7 @@ export class JoymeterboardComponent {
     {
       "id": 5,
       "type": "p",
-      "feedback":"THAT WAS AWESOME!",
+      "feedback": "THAT WAS AWESOME!",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
@@ -114,7 +114,7 @@ export class JoymeterboardComponent {
     {
       "id": 6,
       "type": "p",
-      "feedback":"could be better",
+      "feedback": "could be better",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
@@ -122,7 +122,7 @@ export class JoymeterboardComponent {
     {
       "id": 7,
       "type": "p",
-      "feedback":"Positive",
+      "feedback": "Positive",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
@@ -130,7 +130,7 @@ export class JoymeterboardComponent {
     {
       "id": 8,
       "type": "vp",
-      "feedback":"Very Happy",
+      "feedback": "Very Happy",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D"
@@ -138,7 +138,7 @@ export class JoymeterboardComponent {
     {
       "id": 9,
       "type": "vp",
-      "feedback":"Very Happy",
+      "feedback": "Very Happy",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D"
@@ -146,7 +146,7 @@ export class JoymeterboardComponent {
     {
       "id": 10,
       "type": "n",
-      "feedback":"Disappointed",
+      "feedback": "Disappointed",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I have done some work for somebody, but he is not satisfied. I still want the feedback from him, and am trying to convince him to give me some feedback (likely bad); I honestly wouldn’t like to get negative feedback."
@@ -154,7 +154,7 @@ export class JoymeterboardComponent {
     {
       "id": 11,
       "type": "n",
-      "feedback":"Disappointed",
+      "feedback": "Disappointed",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I have done some work for somebody, but he is not satisfied. I still want the feedback from him, and am trying to convince him to give me some feedback (likely bad); I honestly wouldn’t like to get negative feedback."
@@ -162,7 +162,7 @@ export class JoymeterboardComponent {
     {
       "id": 12,
       "type": "vp",
-      "feedback":"Very Happy",
+      "feedback": "Very Happy",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D"
@@ -170,7 +170,7 @@ export class JoymeterboardComponent {
     {
       "id": 13,
       "type": "p",
-      "feedback":"Positive",
+      "feedback": "Positive",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
@@ -178,7 +178,7 @@ export class JoymeterboardComponent {
     {
       "id": 14,
       "type": "vp",
-      "feedback":"Very Happy",
+      "feedback": "Very Happy",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "Thank you for always being my sides during all the interviews and decision makings in the last sprint. Without you if wouldn't be that easy for me to manage everything. Looking forward for more tasks together :D"
@@ -186,18 +186,28 @@ export class JoymeterboardComponent {
     {
       "id": 15,
       "type": "p",
-      "feedback":"meh",
+      "feedback": "meh",
       "name": "Patty Kerry",
       "team": "Team A",
       "desc": "I think that the word “kind” can be of help here. Kind comments… kind reviews etc., will be somewhat more subtle and may hint at the desired action on their part ;)"
     },
   ];
+  reviewRecords: any[] = [];
+  mainTab: number = 1;
+  selectedTab: string = "";
+
   constructor(private calendar: NgbCalendar) {
     this.model = this.calendar.getToday();
+    this.reviewRecords = this.allRecords
   }
 
   onDateSelect(event: any) {
     console.log(event);
     // Do something with the selected date if needed
+  }
+  feedBackTab(name: string) {
+    this.selectedTab = name;
+    this.reviewRecords = this.allRecords.filter(x => x.feedback.toLowerCase() === name.toLowerCase());
+
   }
 }
