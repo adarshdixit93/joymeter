@@ -285,11 +285,7 @@
   <div
     class="bg-[#FCFFFF] custom-shadow rounded-2xl p-4 sm:m-5 lg:m-10 hidden sm:block"
   >
-    <img
-      src="../../../assets/images/feedback-shape.png"
-      alt="img"
-      class="absolute top-0 right-0 w-[25%]"
-    />
+  <img src="../../../assets/images/feedback-shape.png" alt="img" class="absolute top-0 right-0" />
     <div class="flex justify-between items-center sm:mb-7 mb-4">
       <div class="flex items-center gap-2.5">
         <div
@@ -427,10 +423,14 @@
                     type="text"
                     placeholder="August 31st, 2021"
                     class="border-b bg-transparent text-sm border-[#F08A5D] pb-1 text-[#454545] w-full outline-none ps-3 placeholder:text-[#454545]"
+                    name="dp2"
+                    [(ngModel)]="model"
+                    ngbDatepicker
+                    #d2="ngbDatepicker"
                   />
                   <i
                     class="fa-solid fa-calendar-days right-0 bottom-1.5 absolute text-[#F08A5D]"
-                  ></i>
+                    (click)="d2.toggle()"></i>
                 </div>
               </div>
             </div>
@@ -584,11 +584,8 @@
           </div>
         </div>
       </div>
+      <img src="../../../assets/images/feedback-shape-second.png" alt="img"
+                  class="absolute top-auto -bottom-[80px] -left-[80px] -z-[1]" />
     </div>
-    <img
-      src="../../../assets/images/feedback-shape-second.png"
-      alt="img"
-      class="rotate-[85deg] absolute w-[16%] -left-[150px] -bottom-[330px]"
-    />
   </div>
 </div>
